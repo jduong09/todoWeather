@@ -1,0 +1,27 @@
+{
+  "name": "todoweatherbrowser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jduong09/todoWeather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jduong09/todoWeather/issues"
+  },
+  "homepage": "https://github.com/jduong09/todoWeather#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "dotenv-webpack": "^8.0.1",
+    "style-loader": "^3.3.2"
+  }
+}

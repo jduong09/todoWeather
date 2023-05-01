@@ -1,0 +1,44 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#div-weather {
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+#div-weather > div {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#span-temp {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+#list-extras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#list-extras > li {
+  margin: 0 1rem;
+}
+
+#list-extras > li > h4 {
+  text-transform: uppercase;
+}
+

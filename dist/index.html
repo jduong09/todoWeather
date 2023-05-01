@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./assets/css/meyers_reset.css">
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-  <script type="text/javascript" src="./assets/js/index.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="./main.js"></script>
   <title>Todo | Weather Browser</title>
 </head>
 <body>
@@ -15,7 +16,6 @@
     <nav></nav>
   </header>
   <main>
-    <h2 id="current-time"></h2>
     <form id="form-weather-search">
       <p>
         <label for="search">Search City, Zip Code:</label>
@@ -23,6 +23,12 @@
       </p>
       <button id="btn-submit" type="submit">Search</button>
     </form>
+    <div id="div-weather"></div>
   </main>
+  <footer>
+    <div id="div-link-back">
+      Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+    </div>
+  </footer>
 </body>
 </html>
