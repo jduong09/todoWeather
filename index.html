@@ -20,9 +20,23 @@
         <p>
           <label for="search">Search:</label>
           <input id="search" name="search" type="text" placeholder="City, Zip Code...">
+          <span id="span-error"></span>
         </p>
         <button id="btn-submit" type="submit">Search</button>
       </form>
+    </div>
+    <div id="div-search-tips">
+      <h3>Possible Search Types</h3>
+      <ul id="list-search-tips">
+        <li>Latitude and Longitude (Decimal degree) e.g: 48.8567,2.3508</li>
+        <li>City Name e.g.: Paris</li>
+        <li>US Zipcode e.g.: 10001</li>
+        <li>Canada Postal Code e.g: G2J</li>
+        <li>Metar: (metar code&) e.g: metar:EGLL</li>
+        <li>Iata: (3 digit airport code) e.g: iata:DXB</li>
+        <li>Auto:ip IP lookup e.g: auto:ip</li>
+        <li>IP address (IPv4 and IPv6 supported) e.g: 100.0.0.1</li>
+      </ul>
     </div>
     <div id="div-weather" class="hide"></div>
   </main>
