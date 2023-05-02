@@ -20,7 +20,7 @@ time, mark, audio, video {
 	box-sizing: border-box;
 }
 
-button {
+input, button {
 	background: none;
 	border: 0;
 	outline: none;

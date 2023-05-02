@@ -13,17 +13,18 @@
 <body>
   <header>
     <h1>Weather Browser</h1>
-    <nav></nav>
   </header>
   <main>
-    <form id="form-weather-search">
-      <p>
-        <label for="search">Search City, Zip Code:</label>
-        <input id="search" name="search" type="text" value="Ann Arbor">
-      </p>
-      <button id="btn-submit" type="submit">Search</button>
-    </form>
-    <div id="div-weather"></div>
+    <div id="div-form">
+      <form id="form-weather-search">
+        <p>
+          <label for="search">Search:</label>
+          <input id="search" name="search" type="text" placeholder="City, Zip Code...">
+        </p>
+        <button id="btn-submit" type="submit">Search</button>
+      </form>
+    </div>
+    <div id="div-weather" class="hide"></div>
   </main>
   <footer>
     <div id="div-link-back">

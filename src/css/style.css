@@ -1,8 +1,12 @@
+.hide {
+  display: none !important;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-#div-weather {
+header, #div-weather, footer {
   text-align: center;
 }
 
@@ -10,8 +14,57 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+#div-form, #div-weather {
+  width: fit-content;
+  margin: 1rem auto;
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 8px;
+}
+
+#div-form {
+  padding: 1rem;
+}
+
+#form-weather-search > p {
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: .5rem;
+  border-radius: 8px;
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+#btn-submit {
+  display: block;
+  margin: 0 auto;
+  padding: .5rem 1rem;
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(0, 0%, 0%);
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+#div-weather {
+  padding: 2rem;
+}
+
 #div-weather > div {
   margin-bottom: 2rem;
+}
+
+#div-weather > div:last-of-type {
+  margin-bottom: 0;
 }
 
 h3 {
@@ -42,3 +95,9 @@ h2 {
   text-transform: uppercase;
 }
 
+/* Active States */
+#btn-submit:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 100%, 100%);
+}
