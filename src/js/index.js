@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const inputSearch = document.getElementById('search').value;
 
-    // run search for weather api.
     await weatherApiCall(inputSearch)
       .then(async json => {
         await populateDOM(json);
