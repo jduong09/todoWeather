@@ -23,7 +23,7 @@ main {
   margin-bottom: 2rem;
 }
 
-#div-form, #div-weather {
+#div-form, #div-search-tips, #div-weather {
   width: fit-content;
   margin: 1rem auto;
   border: 2px solid hsl(0, 0%, 0%);
@@ -35,13 +35,20 @@ main {
 }
 
 #form-weather-search > p {
-  margin-bottom: 1rem;
+  width: fit-content;
+  margin: 0 auto 1rem auto;
 }
 
 input {
   padding: .5rem;
   border-radius: 8px;
   border: 2px solid hsl(0, 0%, 0%);
+}
+
+#span-error {
+  display: block;
+  margin-top: .25rem;
+  color: hsl(0, 100%, 50%);
 }
 
 #btn-submit {
@@ -53,6 +60,23 @@ input {
   border: 2px solid hsl(0, 0%, 0%);
   border-radius: 4px;
   font-weight: 700;
+}
+
+#div-search-tips {
+  padding: 1rem;
+}
+
+#div-search-tips > h3 {
+  font-size: 1.15rem;
+}
+
+#list-search-tips {
+  list-style: disc;
+}
+
+#list-search-tips > li {
+  margin-bottom: .5rem;
+  margin-left: 1.15rem;
 }
 
 #div-weather {

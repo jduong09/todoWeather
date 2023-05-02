@@ -3,27 +3,45 @@ import "../css/style.css";
 
 document.addEventListener('DOMContentLoaded', () => {
   const btnSubmit = document.getElementById('btn-submit');
-
-  btnSubmit.addEventListener('click', (e) => {
+  const spanError = document.getElementById('span-error');
+  const divSearchTips = document.getElementById('div-search-tips');
+  const divWeather = document.getElementById('div-weather');
+  
+  btnSubmit.addEventListener('click', async (e) => {
     e.preventDefault();
     const inputSearch = document.getElementById('search').value;
-    // run search for weather api. 
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${inputSearch}`, {
-      method: 'GET',  
-      mode: 'cors',
-      
-    }).then(response => {
-      return response.json();
-    }).then(json => {
-      console.log(json);
-      populateDOM(json);
-    }).catch(error => {
-      console.log(error);
-    });
+
+    // run search for weather api.
+    await weatherApiCall(inputSearch)
+      .then(async json => {
+        await populateDOM(json);
+        spanError.classList.add('hide');
+      })
+      .catch(error => {
+        spanError.innerHTML = `${error}`;
+        spanError.classList.remove('hide');
+        divSearchTips.classList.remove('hide');
+        divWeather.classList.add('hide');
+      });
   });
 });
 
+const weatherApiCall = async (query) => {
+  const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${query}`, {
+    method: 'GET',  
+    mode: 'cors',
+  });
+
+  if (response.ok) {
+    const jsonValue = await response.json();
+    return Promise.resolve(jsonValue);
+  } else {
+    return Promise.reject(response.statusText)
+  }
+}
+
 const populateDOM = (obj) => {
+  const divSearchTips = document.getElementById('div-search-tips');
   const divWeather = document.getElementById('div-weather');
 
   let divLocation = document.createElement('div');
@@ -72,6 +90,7 @@ const populateDOM = (obj) => {
   divWeather.append(divLocation, divCondition, divRelevantInfo);
 
   if (divWeather.classList.contains('hide')) {
+    divSearchTips.classList.add('hide');
     divWeather.classList.remove('hide');
   }
 };
