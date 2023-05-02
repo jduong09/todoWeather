@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputSearch = document.getElementById('search').value;
 
     await weatherApiCall(inputSearch)
-      .then(async json => {
-        await populateDOM(json);
+      .then(json => {
+        populateDOM(json);
         spanError.classList.add('hide');
       })
       .catch(error => {
